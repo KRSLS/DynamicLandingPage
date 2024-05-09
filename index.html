@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic</title>
+</head>
+
+
+<body>
+    <div class="pageSlider" id="pageSlider">
+        <div class="circle" id="c1" onclick="changePage(1)">
+            <p>About</p>
+        </div>
+        <div class="circle" id="c2" onclick="changePage(2)">
+            <p>Work</p>
+        </div>
+        <div class="circle" id="c3" onclick="changePage(3)">
+            <p>Contact</p>
+        </div>
+    </div>
+
+    <div class="pageContainer">
+        <div class="page1" id="p1"></div>
+    </div>
+
+    <div class="pageContainer">
+        <div class="page2" id="p2"></div>
+    </div>
+
+    <div class="pageContainer">
+        <div class="page3" id="p3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
