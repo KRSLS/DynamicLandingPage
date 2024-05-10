@@ -1,9 +1,5 @@
 window.addEventListener('scroll', (event) => {
     // console.log(`Scroll Value: ${scrollY}`);
-
-    var pages;
-
-
 });
 
 window.addEventListener('load', (e) => {
