@@ -42,11 +42,14 @@ var c1 = document.getElementById('c1');
 var c2 = document.getElementById('c2');
 var c3 = document.getElementById('c3');
 
+var pages = document.getElementsByClassName('');
+
 function changePage(page) {
     pageSelected = page;
 
     if (pageSelected === 1) {
         document.getElementById('p1').scrollIntoView();
+
         c1.classList.add('circleActive');
         c2.classList.remove('circleActive');
         c3.classList.remove('circleActive');
