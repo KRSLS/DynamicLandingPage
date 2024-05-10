@@ -30,7 +30,7 @@ setInterval(() => {
 
     console.log(cooldown);
     if (cooldown < 0) cooldown = 0;
-    if (cooldown > 0) cooldown -= 0.3;
+    if (cooldown > 0) cooldown -= 0.4;
 
     console.log(`Scroll cooldown: ${cooldown}`);
 }, 200);
