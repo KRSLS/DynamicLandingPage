@@ -6,23 +6,34 @@ window.addEventListener('load', (e) => {
     changePage(1);
 });
 
-window.addEventListener('wheel', (e) => {
-    if (e.deltaY > 1) {
-        if (pageSelected >= 3) {
-            pageSelected = 1;
-        }
-        else pageSelected += 1;
-    }
-    else {
-        if (pageSelected <= 1) {
-            pageSelected = 3;
-        }
-        else pageSelected -= 1;
-    }
+var cooldown = 1;
 
-    console.log(pageSelected);
-    changePage(pageSelected);
-});
+setInterval(() => {
+    window.addEventListener('wheel', (e) => {
+        if (cooldown <= 0) {
+            if (e.deltaY > 1) {
+                if (pageSelected >= 3) {
+                    pageSelected = 1;
+                }
+                else pageSelected += 1;
+            }
+            else {
+                if (pageSelected <= 1) {
+                    pageSelected = 3;
+                }
+                else pageSelected -= 1;
+            }
+            changePage(pageSelected);
+            cooldown = 1;
+        }
+    });
+
+    console.log(cooldown);
+    if (cooldown < 0) cooldown = 0;
+    if (cooldown > 0) cooldown -= 0.3;
+
+    console.log(`Scroll cooldown: ${cooldown}`);
+}, 200);
 
 var pageSelected = 1;
 var virtualPageSelected = 1;
