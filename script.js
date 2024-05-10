@@ -33,12 +33,10 @@ var c3 = document.getElementById('c3');
 
 function changePage(page) {
     pageSelected = page;
-    // console.log(pageSelected);
 
     if (pageSelected === 1) {
         document.getElementById('p1').scrollIntoView();
         c1.classList.add('circleActive');
-        c1.focus();
         c2.classList.remove('circleActive');
         c3.classList.remove('circleActive');
         document.getElementById('p1').classList.add('pageZoomAnimation');
@@ -53,7 +51,6 @@ function changePage(page) {
         document.getElementById('p2').scrollIntoView();
         c1.classList.remove('circleActive');
         c2.classList.add('circleActive');
-        c2.focus();
         c3.classList.remove('circleActive');
 
         document.getElementById('p1').classList.remove('pageZoomAnimation');
@@ -70,7 +67,6 @@ function changePage(page) {
         c1.classList.remove('circleActive');
         c2.classList.remove('circleActive');
         c3.classList.add('circleActive');
-        c3.focus();
         document.getElementById('p1').classList.remove('pageZoomAnimation');
         document.getElementById('p2').classList.remove('pageZoomAnimation');
         document.getElementById('p3').classList.add('pageZoomAnimation');
@@ -80,8 +76,4 @@ function changePage(page) {
         document.getElementById('p3').classList.remove('pageZoomResetAnimation');
 
     }
-}
-
-function scrollToTop() {
-    document.body.scrollTo(0, 0);
 }
