@@ -170,6 +170,7 @@ body {
     text-shadow: 0px 5px 15px#1c1c1ca9;
     animation: textSlideIn 1.3s 1 forwards;
     animation-fill-mode: forwards;
+    white-space: nowrap;
 }
 
 .heroContainer .butter {
