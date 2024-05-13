@@ -28,11 +28,11 @@ setInterval(() => {
         }
     });
 
-    console.log(cooldown);
+    // console.log(cooldown);
     if (cooldown < 0) cooldown = 0;
     if (cooldown > 0) cooldown -= 0.4;
 
-    console.log(`Scroll cooldown: ${cooldown}`);
+    // console.log(`Scroll cooldown: ${cooldown}`);
 }, 200);
 
 var pageSelected = 1;
